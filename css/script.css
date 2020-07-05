@@ -1,0 +1,158 @@
+@font-face {
+    font-family: AtariFont;
+    src: url(../fonts/AtariSmall.ttf)
+}
+
+body {
+    background: #1a1a1a;
+    color: #fff
+}
+
+textarea {
+    background: #2f2f2f;
+    border: 1px solid #464646;
+    color: #d4d4d4;
+    z-index: 1;
+    width: 100%
+}
+
+.info {
+    margin-top: 10px;
+    z-index: 1
+}
+
+#katilim,
+#katilimci,
+#karakter {
+    display: inline-block;
+    z-index: 1
+}
+
+#loading,
+#resultTop {
+    position: fixed;
+    width: 100%;
+    padding-top: 57px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    line-height: 72px;
+    text-align: center;
+    display: none;
+    background: #000000a1;
+    z-index: 4
+}
+
+#loading img {
+    width: 75px;
+    z-index: 1
+}
+
+#loading p,
+#resultTop p {
+    font-family: AtariFont;
+    margin: 0;
+    font-size: 52px;
+    z-index: 1;
+    word-break: break-word
+}
+
+#resultTop b {
+    font-family: AtariFont;
+    margin: 0;
+    font-size: 44px;
+    color: #3c479d;
+    z-index: 1
+}
+
+#resultClose {
+    top: 12px;
+    right: 11px;
+    z-index: 999;
+    background: #2f2f2f;
+    line-height: 10px;
+    border: 1px solid #4a4a4a;
+    border-radius: 7%;
+    padding: 5px;
+    color: #6a78e4;
+    position: absolute;
+    z-index: 1
+}
+
+.jquery-background-video-wrapper {
+    height: 100%;
+    position: absolute !important;
+    width: 100%;
+    z-index: 3
+}
+
+.btn-sf {
+    background-color: #2f2f2f;
+    color: #fff;
+    border-color: #4c4c4c
+}
+
+.btn-sf:hover {
+    color: #62ab72
+}
+
+.clear {
+    clear: both
+}
+
+.form-control {
+    background: #2f2f2f;
+    color: #fff;
+    border: 1px solid #464646
+}
+
+.form-control:focus {
+    background: #2f2f2f;
+    color: #e0e0e0
+}
+
+.log {
+    padding: 30px;
+    text-align: right;
+}
+
+.log code {
+    text-align: left;
+    display: block;
+    font-family: "dejavu sans mono", monaco, "lucida console", "courier new", monospace;
+    font-size: 12px;
+    line-height: 1.5em;
+    white-space: nowrap;
+    max-height: 24em;
+    background: rgb(47, 47, 47);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(70, 70, 70);
+    border-image: initial;
+    padding: 4px 4px;
+    overflow: auto;
+    color: #cccccc;
+    width: 100%;
+    float: right;
+    min-height: 355px;
+}
+
+hr {
+    border-top: 1px solid rgb(47, 47, 47);
+}
+
+.jquery-background-video-pauseplay {
+    display: none;
+}
+
+.btn-sf:focus {
+    color: #717171;
+}
+
+footer {
+    padding: 20px 20px;
+    background: rgb(47, 47, 47);
+    text-align: center;
+    margin-top: 45px;
+}

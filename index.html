@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="Çekiliş Yap" />
+		<meta name="keywords" content="çekiliş yap, kura çek, isim çekilişi, ödül çekilişi" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/script.css">				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/jquery.background-video.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/confetti.js"></script>
+		<title>Çekiliş Yap</title>
+	</head>
+	<body>
+		<div id="resultTop">
+			<a href="javascript:void(0);"><div id="resultClose">×</div></a>
+			<br>
+			<b>...</b>
+			<p id="result">Kazanan</p>
+		</div>
+		<div id="loading">
+			<img src="images/loader.gif">
+			<p id="loading_p">YUKLENIYOR...</p>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12" style="margin-top: 45px;">
+					<img src="images/logo.png">
+					<br>
+					<br>
+					<textarea class="editor" onchange="countInfo();" onkeyup="countInfo();" name="message" id="message" tabindex="0" style="white-space:pre-wrap;height: 275px;padding-left: 10px;" placeholder="Çekilişe katılacak isimleri alt alta yazın. Aynı kişiyi birden fazla yazarsanız şansı artmış olur. Katılımcıların tek şansı olsun istiyorsanız Klonları Yoket butonuna tıklayın."></textarea>
+					<br>
+					<div class="info">
+						<b>Katılım Sayısı:</b> <div id="katilim">0</div> / <b>Katılımcı Sayısı:</b> <div id="katilimci">0</div> / <b>Metin Uzunluğu:</b> <div id="karakter">0</div>
+					</div>
+					<div class="clear"></div>
+					<br>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="btn-group flex-wrap">
+								<button type="button" class="btn btn-sf" onclick="mixList(this);">Karıştır</button>
+								<button type="button" class="btn btn-sf" onclick="clearDuplicates(this);" id="clearDup">Klonları Yoket</button>
+								<button type="button" class="btn btn-sf" onclick="text_file.click();" id="import">İçe Aktar</button> 
+							</div>
+							<input type="file" id="text_file" name="text_file" accept=".txt" style="display:none;" onchange="fileInput(this);"><br><br>
+						</div>	
+						<div class="col-md-8">
+							<input type="checkbox" id="deleteMode" name="deleteMode" checked="true"><label for="deleteMode">&nbsp;Kazanan kişinin haklarını listeden sil</label><br>
+							<form>
+								<div class="input-group mb-3" style="max-width:250px;display: block;">
+									<input class="form-control" text="text" id="toBeDrawn" style="width: 135px;display: inline;" placeholder="Ödül Adı" autocomplete="off">
+									<div class="input-group-append">
+										<button type="submit" class="btn btn-success" onclick="Draw(this);return false;">İsim Çek</button>
+									</div>
+								</div>		
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<div class="log">
+						<h3>Kazananlar</h3><hr>
+						<code id="logInput"></code>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			 <a href="https://github.com/alperencetin">alperencetin</a> &copy; All Rights Reserved.
+		</footer>
+	</body>
+</html>
